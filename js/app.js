@@ -23,6 +23,23 @@ $('.filter__item').click(function(event) {
 
 	return false;
 });
+
+$('.goto').click(function() {
+	var el=$(this).attr('href').replace('#','');
+	var offset=0;
+$('body,html').animate({scrollTop:$('.'+el).offset().top+offset},500, function() {});
+
+if($('.header-menu').hasClass('active')){
+	$('.header-menu,.header-menu__icon').removeClass('active');
+	$('body').removeClass('lock');
+}
+return false;
+});
+
+$(window).scroll(function(event) {
+	var s=0-$(this).scrollTop()/3;
+$('.mainblock__image').css('transform','translate3d(0, '+s+'px, 0)');
+});
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
