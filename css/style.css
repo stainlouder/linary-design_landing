@@ -150,10 +150,10 @@ body._lock {
   font-weight: 700;
   letter-spacing: 0.7px;
   position: relative;
-  border-color: #5482b9;
+  border-color: #b72877;
   color: #fff;
-  background-image: -o-linear-gradient(45deg, #5482b9 50%, transparent 50%);
-  background-image: linear-gradient(45deg, #5482b9 50%, transparent 50%);
+  background-image: -o-linear-gradient(45deg, #b72877 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #b72877 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
   -webkit-transition: background 300ms ease-in-out;
@@ -1678,6 +1678,30 @@ body.ie ._ibg img {
   }
 }
 
+@keyframes arrow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
 .content {
   background-color: #fff;
   position: relative;
@@ -1686,11 +1710,11 @@ body.ie ._ibg img {
 
 .menu {
   padding: 22px 0;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 .menu_mb {
-  margin: 0px 0px 130px 0px;
+  margin: 0px 0px 100px 0px;
 }
 
 @media (max-width: 991.98px) {
@@ -1826,7 +1850,7 @@ body.ie ._ibg img {
 
 .about__icon {
   border-radius: 50%;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #333333;
   width: 92px;
   height: 92px;
   display: -webkit-inline-box;
@@ -1839,6 +1863,43 @@ body.ie ._ibg img {
       -ms-flex-align: center;
           align-items: center;
   margin: 0px 0px 40px 0px;
+  background: -o-linear-gradient(135deg, #2f2f2f, #ffffff, #ffffff, #ffffff);
+  background: linear-gradient(-45deg, #2f2f2f, #ffffff, #ffffff, #ffffff);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 10s ease infinite;
+          animation: gradient 10s ease infinite;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.about__icon:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .about__icon_l img {
@@ -1873,8 +1934,8 @@ body.ie ._ibg img {
 }
 
 .about__text {
-  color: #868585;
-  font-size: 14px;
+  color: #2a2a2a;
+  font-size: 16px;
   font-weight: 300;
   line-height: 26px;
 }
@@ -1904,10 +1965,10 @@ body.ie ._ibg img {
 }
 
 .header-block__subtitle {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 25.89px;
-  color: #868585;
+  color: #2a2a2a;
   padding: 30px 30px 30px 30px;
   margin: 0 auto;
   min-width: 700px;
