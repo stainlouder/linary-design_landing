@@ -1115,6 +1115,7 @@ img.mfp-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1531,7 +1532,7 @@ img.mfp-img {
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
   ._container {
     max-width: 750px;
   }
@@ -1656,10 +1657,22 @@ img.mfp-img {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   ._container {
     max-width: none;
     padding: 0 10px;
+  }
+
+  .arrow--top {
+    -webkit-transform: translateX(-50px);
+        -ms-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+
+  .arrow--bottom {
+    -webkit-transform: translateX(70px);
+        -ms-transform: translateX(70px);
+            transform: translateX(70px);
   }
 
   .menu_mb {
@@ -1668,12 +1681,6 @@ img.mfp-img {
 
   .menu__list li {
     margin: 0px 15px 10px 15px;
-  }
-
-  .menu__list li {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 25%;
-            flex: 0 1 25%;
   }
 
   .about {
@@ -1771,7 +1778,7 @@ img.mfp-img {
   }
 }
 
-@media screen and (max-width: 767.98px), screen and (max-height: 600px) {
+@media screen and (max-width: 768px), screen and (max-height: 600px) {
   .mainblock {
     padding: 20px 0;
   }
@@ -1786,14 +1793,46 @@ img.mfp-img {
   }
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 480px) {
+  .mainblock__title {
+    width: 300px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+  }
+
+  .mainblock__subtitle {
+    font-size: 16px;
+  }
+
   .menu {
     padding: 22px 0 12px 0;
+  }
+
+  .menu__list li {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 0px 5px 10px 5px;
   }
 
   .menu__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+
+  .menu__link {
+    font-size: 14px;
+  }
+
+  .about__text {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .header-block__subtitle {
+    min-width: 300px;
   }
 
   .form-contacts__row {
@@ -1802,5 +1841,26 @@ img.mfp-img {
 
   .form-contacts__column:first-child {
     margin: 0px 0px 30px 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .mainblock__logo {
+    width: 70%;
+    padding: 0 0 50px 0;
+  }
+
+  .mainblock__text {
+    padding: 0px 0px 80px 0px;
+  }
+
+  .arrow--top {
+    -webkit-transform: translateX(-70px);
+        -ms-transform: translateX(-70px);
+            transform: translateX(-70px);
+  }
+
+  .menu__link {
+    font-size: 12px;
   }
 }
