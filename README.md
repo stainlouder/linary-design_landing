@@ -35,7 +35,6 @@ CSS & SASS:
 JS (pure):
 * сортировка каталога (filter item);
 * and more;
-* 
 * JS (vendors):
 * галерея (magnific popup);
 * and more;
